@@ -4,6 +4,7 @@ Module for the lockboxes problem.
 Determines if all boxes can be opened.
 """
 
+
 def canUnlockAll(boxes):
     """
     Returns True if all boxes can be opened, else False.
