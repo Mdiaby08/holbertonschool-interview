@@ -1,7 +1,16 @@
 #!/usr/bin/python3
+"""
+Module for the lockboxes problem.
+Determines which boxes can be opened based on available keys.
+"""
+
 def canUnlockAll(boxes):
-    opened = [0]                 # on commence avec la boîte 0
-    keys = boxes[0].copy()       # clés trouvées dans la boîte 0
+    """
+    Returns a list of opened boxes.
+    The first box (0) is always unlocked.
+    """
+    opened = [0]
+    keys = boxes[0].copy()
 
     for key in keys:
         if key < len(boxes) and key not in opened:
@@ -11,4 +20,3 @@ def canUnlockAll(boxes):
                     keys.append(new_key)
 
     return opened
-
