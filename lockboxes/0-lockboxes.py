@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+
 """
 Module for the lockboxes problem.
 Determines which boxes can be opened based on available keys.
