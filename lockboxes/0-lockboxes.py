@@ -1,24 +1,24 @@
 #!/usr/bin/python3
-
-
 """
 Module for the lockboxes problem.
-Determines which boxes can be opened based on available keys.
+Determines if all boxes can be opened.
 """
 
 def canUnlockAll(boxes):
     """
-    Returns a list of opened boxes.
-    The first box (0) is always unlocked.
+    Returns True if all boxes can be opened, else False.
     """
-    opened = [0]
-    keys = boxes[0].copy()
+    n = len(boxes)
+    opened = set([0])
+    keys = set(boxes[0])
 
-    for key in keys:
-        if key < len(boxes) and key not in opened:
-            opened.append(key)
-            for new_key in boxes[key]:
-                if new_key not in keys:
-                    keys.append(new_key)
+    changed = True
+    while changed:
+        changed = False
+        for key in list(keys):
+            if key < n and key not in opened:
+                opened.add(key)
+                keys.update(boxes[key])
+                changed = True
 
-    return opened
+    return len(opened) == n
