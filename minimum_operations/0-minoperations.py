@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Module qui calcule le nombre minimal d'opérations 
+"""
 
 
 def minOperations(n):
