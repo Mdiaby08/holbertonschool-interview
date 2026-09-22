@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module qui calcule le nombre minimal d'opérations 
+Module qui calcule le nombre minimal d'opérations
 """
 
 
